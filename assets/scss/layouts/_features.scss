@@ -1,0 +1,36 @@
+.feature {
+	padding-top: 30px;
+	padding-bottom: 40px;
+	&-item {
+		@include max(991px) {
+			margin-bottom: 24px;
+		}
+
+		.info {
+			display: flex;
+			align-items: center;
+			margin-bottom: 16px;
+
+			span {
+				margin-right: 22px;
+				display: inline-block;
+			}
+
+			h2 {
+				color: #333333;
+				font-size: 22px;
+				line-height: 30px;
+				font-weight: 600;
+				font-family: $f-secondary;
+				text-transform: capitalize;
+			}
+		}
+
+		p {
+			color: #333;
+			font-size: 14px;
+			line-height: 20px;
+			font-family: $f-secondary;
+		}
+	}
+}

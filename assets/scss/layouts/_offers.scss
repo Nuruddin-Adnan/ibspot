@@ -1,0 +1,49 @@
+.offers {
+	margin-bottom: 40px;
+	&-content {
+		display: flex;
+		padding: 24px;
+		overflow: hidden;
+		position: relative;
+		border-radius: 10px;
+		align-items: center;
+		background-color: #ededed;
+
+		@include max(991px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		& > h2,
+		& > h3 {
+			width: 190px;
+			flex-shrink: 0;
+			font-size: 40px;
+			color: #2264d1;
+			font-weight: 600;
+			text-align: center;
+			margin-right: 40px;
+			line-height: 48.41px;
+			font-family: $f-secondary;
+
+			@include max(991px) {
+				width: 100%;
+				margin: 0;
+				margin-bottom: 24px;
+			}
+
+			@include max(767px) {
+				font-size: 32px;
+				line-height: 42px;
+			}
+		}
+
+		& > h3 {
+			color: #ee3f24;
+		}
+	}
+
+	.swiper {
+		width: 100%;
+	}
+}

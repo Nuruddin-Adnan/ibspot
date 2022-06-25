@@ -1,0 +1,110 @@
+.category {
+	.heading {
+		color: #000;
+		font-weight: 600;
+		font-size: 21px;
+		line-height: 40px;
+		margin-bottom: 12px;
+		font-family: $f-secondary;
+	}
+
+	&-menu {
+		@include max(991px) {
+			margin-bottom: 24px;
+		}
+
+		.accordion {
+			border: 0;
+			&-item {
+				border: 0;
+				padding: 0px;
+				border-radius: 0px;
+				background-color: transparent;
+			}
+
+			&-button {
+				border: 0;
+				padding: 0;
+				color: #000;
+				font-size: 15px;
+				align-items: center;
+				line-height: 40px;
+				font-weight: 600;
+				text-transform: capitalize;
+				background-color: transparent;
+				border-radius: 0px !important;
+				border-bottom: 1px solid #a4a4a4;
+
+				&::after {
+					transition: all 0.3s linear;
+					transform: scale(0.6);
+					background-image: url("data:image/svg+xml,%3Csvg width='12' height='13' viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.01172 12.2227V7.51172H0.335938V5.54297H5.01172V0.867188H7.00391V5.54297H11.6797V7.51172H7.00391V12.2227H5.01172Z' fill='%232264D1'/%3E%3C/svg%3E%0A");
+				}
+
+				&:not(.collapsed) {
+					box-shadow: none;
+					&::after {
+						background-image: url("data:image/svg+xml,%3Csvg width='11' height='2' viewBox='0 0 11 2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2V0H11V2H0Z' fill='%232264D1'/%3E%3C/svg%3E%0A");
+					}
+				}
+
+				&:focus {
+					outline: none;
+					box-shadow: none;
+				}
+			}
+
+			&-body {
+				padding: 0px;
+				padding-top: 12px;
+				ul {
+					li {
+						a {
+							color: #000;
+							font-size: 14px;
+							line-height: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&-content {
+		display: grid;
+		margin-bottom: 34px;
+		grid-template-columns: repeat(4, 1fr);
+
+		@include max(1200px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include max(991px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include max(575px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&-pagination {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include max(575px) {
+			flex-direction: column;
+		}
+
+		p {
+			color: #000;
+			font-size: 15px;
+			line-height: 30px;
+
+			@include max(575px) {
+				margin-bottom: 24px;
+			}
+		}
+	}
+}

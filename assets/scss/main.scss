@@ -1,0 +1,25 @@
+// Abstracts
+@import "abstracts/variable";
+@import "abstracts/placeholder";
+@import "abstracts/functions";
+@import "abstracts/reset";
+
+// component
+@import "components/button";
+@import "components/cards";
+
+// layouts
+@import "layouts/container";
+@import "layouts/header";
+@import "layouts/banner";
+@import "layouts/categories";
+@import "layouts/details";
+@import "layouts/review";
+@import "layouts/breadcrumb";
+@import "layouts/shops";
+@import "layouts/products";
+@import "layouts/offers";
+@import "layouts/features";
+@import "layouts/newsletter";
+@import "layouts/modals";
+@import "layouts/footer";

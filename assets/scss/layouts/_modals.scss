@@ -1,0 +1,146 @@
+.modal-cart {
+	.modal-header {
+		border: 0;
+	}
+
+	.modal-body {
+		padding: 68px;
+
+		@include max(991px) {
+			padding: 48px;
+		}
+
+		@include max(575px) {
+			padding: 24px;
+		}
+	}
+
+	.heading {
+		display: flex;
+		text-align: center;
+		align-items: center;
+		padding-bottom: 60px;
+		justify-content: center;
+
+		span {
+			margin-right: 12px;
+			display: inline-block;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		h2 {
+			color: #000;
+			font-size: 28px;
+			font-weight: 600;
+			line-height: 33.89px;
+			white-space: nowrap;
+			font-family: $f-secondary;
+
+			@include max(991px) {
+				font-size: 24px;
+			}
+
+			@include max(767px) {
+				font-size: 18px;
+				line-height: 28px;
+			}
+		}
+	}
+
+	&-content {
+		display: flex;
+		align-items: center;
+
+		@include max(991px) {
+			text-align: center;
+			flex-direction: column;
+		}
+
+		.img {
+			margin-right: 30px;
+
+			@include max(991px) {
+				margin: 0;
+				margin-bottom: 24px;
+			}
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.info {
+			a {
+				color: #454545;
+				font-size: 22px;
+				font-weight: 500;
+				line-height: 35px;
+
+				@include max(767px) {
+					font-size: 18px;
+					line-height: 28px;
+				}
+			}
+
+			p {
+				color: #000;
+				font-size: 25px;
+				font-weight: 700;
+				line-height: 29.3px;
+
+				@include max(767px) {
+					font-size: 20px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+
+	&-action {
+		display: flex;
+		padding-top: 90px;
+		align-items: center;
+		justify-content: center;
+
+		@include max(991px) {
+			padding-top: 48px;
+		}
+
+		a {
+			color: #fff;
+			font-size: 16px;
+			overflow: hidden;
+			margin: 0px 16px;
+			padding: 15px 54px;
+			position: relative;
+			border-radius: 20px;
+			line-height: 18.75px;
+			letter-spacing: 0.1px;
+			display: inline-block;
+			white-space: nowrap;
+			text-align: center;
+			text-transform: uppercase;
+			background-color: #ee3f24;
+
+			@include max(991px) {
+				padding: 14px 36px;
+			}
+
+			@include max(767px) {
+				padding: 14px 0px;
+				width: 280px;
+			}
+
+			@include max(575px) {
+				margin: 0px 4px;
+			}
+
+			&:nth-child(2) {
+				background-color: #505056;
+			}
+		}
+	}
+}

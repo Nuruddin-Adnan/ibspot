@@ -1,0 +1,99 @@
+.footer {
+	overflow: hidden;
+	position: relative;
+	background-color: #fff;
+
+	&-content-top {
+		padding: 60px 0px;
+		border-bottom: 1px solid #cecece;
+
+		@include max(991px) {
+			padding-bottom: 24px;
+		}
+	}
+
+	&-content-bottom {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		@include max(991px) {
+			padding: 12px 0px;
+			justify-content: center;
+		}
+
+		p {
+			font-size: 16px;
+			color: #6f6c90;
+			line-height: 20px;
+			font-weight: 400;
+			font-family: $f-secondary;
+
+			@include max(991px) {
+				font-size: 12px;
+			}
+		}
+
+		a {
+			img {
+				max-width: 300px;
+				padding: 20px 0 20px 20px;
+			}
+		}
+	}
+
+	&-logo {
+		width: 165px;
+
+		@include max(991px) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&-menu {
+		@include max(991px) {
+			margin-bottom: 24px;
+		}
+
+		h2 {
+			color: #170f49;
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 22px;
+			margin-bottom: 40px;
+			font-size: $f-secondary;
+			text-transform: capitalize;
+
+			@include max(991px) {
+				margin-bottom: 12px;
+			}
+		}
+
+		ul {
+			li {
+				a {
+					font-size: 16px;
+					color: #6f6c90;
+					line-height: 20px;
+					font-weight: 400;
+					margin-bottom: 18px;
+					display: inline-block;
+					font-family: $f-secondary;
+					text-transform: capitalize;
+					transition: all 0.3s linear;
+
+					@include max(991px) {
+						font-size: 12px;
+						line-height: 21px;
+						margin-bottom: 6px;
+					}
+
+					&:hover {
+						color: #333;
+					}
+				}
+			}
+		}
+	}
+}

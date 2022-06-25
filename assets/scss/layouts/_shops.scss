@@ -1,0 +1,13 @@
+.shops {
+	padding: 32px 0px;
+
+	@include max(991px) {
+		padding: 24px 0px;
+	}
+
+	.shop-card {
+		@include max(991px) {
+			margin-bottom: 24px;
+		}
+	}
+}
