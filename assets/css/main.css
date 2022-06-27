@@ -334,6 +334,7 @@ body {
   color: #333333;
   line-height: 18.75px;
   text-transform: capitalize;
+  padding: 12px 0;
 }
 .header .dropdown-toggle::after {
   display: none;
@@ -448,9 +449,6 @@ body {
   .header-top {
     padding: 14px 0px;
   }
-}
-.header-bottom {
-  padding: 12px 0px;
 }
 @media (max-width: 1200px) {
   .header-bottom-left .dropdown {
@@ -695,6 +693,8 @@ body {
   line-height: 17.58px;
   text-transform: capitalize;
   transition: all 0.3s linear;
+  padding: 12px 14px;
+  display: block;
 }
 @media (max-width: 1200px) {
   .header-menu-item a {
@@ -918,8 +918,39 @@ body {
   color: #e5e5e5;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  border: solid 4px #f7f7f7;
+  width: 35px;
+  height: 35px;
+  display: block;
+  border-radius: 50%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+}
+.swiper-button-prev:hover:after, .swiper-button-next:hover:after {
+  color: #ff453a;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+}
+
+.swiper-button-prev {
+  left: 0px;
+  margin-top: unset;
+}
+
+.swiper-button-next {
+  right: 0px;
+  margin-top: unset;
+}
+
 .banner {
-  margin-top: 154px;
+  margin-top: 147px;
   position: relative;
 }
 .banner .banner-item {
@@ -927,7 +958,7 @@ body {
 }
 @media (max-width: 991px) {
   .banner {
-    margin-top: 95px;
+    margin-top: 74px;
   }
 }
 @media (max-width: 575px) {
@@ -1534,6 +1565,10 @@ body {
   font-size: 16px;
   line-height: 25px;
   letter-spacing: 0.1px;
+}
+
+.lg-backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .review {

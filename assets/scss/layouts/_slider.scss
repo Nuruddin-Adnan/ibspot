@@ -1,0 +1,32 @@
+.swiper-button-prev, .swiper-button-next{
+    border: solid 4px #f7f7f7;
+    width: 35px;
+    height: 35px;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    background-color: #fff;
+
+    &:hover {
+        &:after{
+            color: #ff453a;
+        }
+    }
+}
+.swiper-button-prev:after, .swiper-button-next:after{
+    font-size: 14px;
+    color: rgba(0,0,0,0.8);
+    font-weight: 600;
+}
+
+.swiper-button-prev{
+    left: 0px;
+    margin-top: unset;
+}
+
+.swiper-button-next{
+    right: 0px;
+    margin-top: unset;
+}

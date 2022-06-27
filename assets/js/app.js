@@ -1,5 +1,15 @@
 "use strict"
 
+// header menu show on hover
+function menuShowOnHover(){
+	const mainMenuCollapse = document.querySelector(".mainMenu.collapse");
+	mainMenuCollapse.classList.add("show");
+}
+function menuHideOnblur(){
+	const mainMenuCollapse = document.querySelector(".mainMenu.collapse");
+	mainMenuCollapse.classList.remove("show");
+}
+
 document.querySelectorAll("#categoryMenu").forEach((item) =>
 	item.addEventListener("click", function (event) {
 		event.stopPropagation()
@@ -94,6 +104,10 @@ if (document.querySelector(".product-slider")) {
 			delay: 1600,
 			disableOnInteraction: false,
 		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
 		breakpoints: {
 			480: {
 				slidesPerView: 2,
@@ -111,9 +125,12 @@ if (document.querySelector(".product-slider")) {
 
 if (document.querySelector(".top-trending")) {
 	let swiper = new Swiper(".top-trending", {
-		// slidesPerView: 1,
 		spaceBetween: 12,
 		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
 		breakpoints: {
 			480: {
 				slidesPerView: 2,

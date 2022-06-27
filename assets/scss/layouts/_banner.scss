@@ -1,5 +1,5 @@
 .banner {
-	margin-top: 154px;
+	margin-top: 147px;
 	position: relative;
 
 	.banner-item {
@@ -7,7 +7,7 @@
 	}
 
 	@include max(991px) {
-		margin-top: 95px;
+		margin-top: 74px;
 	}
 
 	@include max(575px) {

@@ -11,6 +11,8 @@
 		<!-- Library -->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/css/lightgallery-bundle.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/css/lg-thumbnail.min.css"/>
 		<!-- Main css -->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/main.css.map" />
@@ -111,7 +113,7 @@
 					<div class="header-bottom-wrapper px-0">
 						<div class="header-bottom-left">
 							<div class="dropdown">
-								<button class="dropdown-toggle"	type="button" data-bs-toggle="collapse" data-bs-target=".mainMenu">
+								<button class="dropdown-toggle"	type="button" data-bs-toggle="collapse" data-bs-target=".mainMenu" onmouseover="menuShowOnHover();" onmouseout="menuHideOnblur();">
 									<svg
 										width="18"
 										height="18"
@@ -157,7 +159,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="main-dropdown-menu">
+					<div class="main-dropdown-menu" onmouseover="menuShowOnHover();" onmouseout="menuHideOnblur();">
 						<ul class="cardWrapper mainMenu shadow-sm collapse" style="background-color: #f9f9f9;">
 							<li class="menuCard">
 							<a href="#">
@@ -1004,44 +1006,46 @@
 				<div class="row">
 					<div class="col-xl-4">
 						<div class="details-gallery">
-							<div class="details-info">
-								<h2 class="d-lg-none d-block">
+							<div class="details-info d-lg-none d-block">
+								<h6>Apple</h6>
+								<h2>
 									2020 Apple Mac Mini with Apple M1 Chip (8GB RAM, 256GB SSD
 									Storage)
 								</h2>
+								<div class="review">
+									<span>
+										<img src="assets/images/icons/stars-full.svg" alt="" />
+									</span>
+									<p>4.5 <span>( 150 reviews ) </span></p>
+								</div>
 							</div>
 							<div class="swiper mySwiper2">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
+								<div class="swiper-wrapper" id="galleryBox">
+									<a href="assets/images/gallery/1.png" data-lg-size="1600-2400" class="swiper-slide gallery-img lg">
 										<img
 											src="assets/images/gallery/1.png"
-											alt="img"
 										/>
-									</div>
-									<div class="swiper-slide">
+									</a>
+									<a href="assets/images/gallery/2.png" data-lg-size="1600-2400" class="swiper-slide gallery-img lg">
 										<img
 											src="assets/images/gallery/2.png"
-											alt="img"
 										/>
-									</div>
-									<div class="swiper-slide">
+									</a>
+									<a href="assets/images/gallery/3.png" data-lg-size="1600-2400" class="swiper-slide gallery-img lg">
 										<img
 											src="assets/images/gallery/3.png"
-											alt="img"
 										/>
-									</div>
-									<div class="swiper-slide">
+									</a>
+									<a href="assets/images/gallery/4.png" data-lg-size="1600-2400" class="swiper-slide gallery-img lg">
 										<img
 											src="assets/images/gallery/4.png"
-											alt="img"
 										/>
-									</div>
-									<div class="swiper-slide">
+									</a>
+									<a href="assets/images/gallery/5.png" data-lg-size="1600-2400" class="swiper-slide gallery-img lg">
 										<img
 											src="assets/images/gallery/5.png"
-											alt="img"
 										/>
-									</div>
+									</a>
 								</div>
 
 								<div class="swiper-button-next">
@@ -1097,17 +1101,18 @@
 						<div class="details-info">
 
 							<div class="details-info-hide overflow-hidden" style="max-height: 500px;">
-								
-								<h6>Apple</h6>
-								<h2 class="d-lg-block d-none">
-									2020 Apple Mac Mini with Apple M1 Chip (8GB RAM, 256GB SSD
-									Storage)
-								</h2>
-								<div class="review">
-									<span>
-										<img src="assets/images/icons/stars-full.svg" alt="" />
-									</span>
-									<p>4.5 <span>( 150 reviews ) </span></p>
+								<div class="d-lg-block d-none">
+									<h6>Apple</h6>
+									<h2>
+										2020 Apple Mac Mini with Apple M1 Chip (8GB RAM, 256GB SSD
+										Storage)
+									</h2>
+									<div class="review">
+										<span>
+											<img src="assets/images/icons/stars-full.svg" alt="" />
+										</span>
+										<p>4.5 <span>( 150 reviews ) </span></p>
+									</div>
 								</div>
 
 	
@@ -1285,11 +1290,20 @@
 								<!-- another prduct-details style -->
 								<p class="mt-4">Quantity: <strong>1EA</strong></p>
 								<div class="my-4">
-									<button class="btn btn-outline-secondary rounded-0 px-2 py-1">3EA</button>
-									<button class="btn btn-outline-secondary rounded-0 px-2 py-1">1EA</button>
-									<button class="btn btn-outline-secondary rounded-0 px-2 py-1">6EA</button>
-									<button class="btn btn-outline-secondary rounded-0 px-2 py-1">12EA</button>
-									<button class="btn btn-outline-secondary rounded-0 px-2 py-1">24EA</button>
+									<input type="radio" class="btn-check" name="options-main" id="option1" autocomplete="off" checked>
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1"-main for="option1">1EA</label>
+
+									<input type="radio" class="btn-check" name="options-main" id="option2" autocomplete="off">
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1"-main for="option2">3EA</label>
+
+									<input type="radio" class="btn-check" name="options-main" id="option3" autocomplete="off">
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1"-main for="option3">6EA</label>
+
+									<input type="radio" class="btn-check" name="options-main" id="option4" autocomplete="off">
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1"-main for="option4">12EA</label>
+
+									<input type="radio" class="btn-check" name="options-main" id="option5" autocomplete="off">
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1"-main for="option5">24EA</label>
 								</div>
 								<div class="short-description mb-4">
 									<p>ABSORPATION RATE - Zinc Supplement PRO-Z Gold with significantly improved absorption in the body</p>
@@ -1368,6 +1382,23 @@
 
 							<div class="details-card-quantity">
 								<h2>In Stock</h2>
+								<p class="mt-3">Size: <strong>1EA</strong></p>
+								<div class="mt-2 mb-4">
+									<input type="radio" class="btn-check" name="options" id="cart-option1" autocomplete="off" checked>
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1" for="cart-option1">1EA</label>
+
+									<input type="radio" class="btn-check" name="options" id="cart-option2" autocomplete="off">
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1" for="cart-option2">3EA</label>
+
+									<input type="radio" class="btn-check" name="options" id="cart-option3" autocomplete="off">
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1" for="cart-option3">6EA</label>
+
+									<input type="radio" class="btn-check" name="options" id="cart-option4" autocomplete="off">
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1" for="cart-option4">12EA</label>
+
+									<input type="radio" class="btn-check" name="options" id="cart-option5" autocomplete="off">
+									<label class="btn btn-sm btn-outline-secondary rounded-0 px-2 py-1" for="cart-option5">24EA</label>
+								</div>
 
 								<div class="quantity">
 									<h6>quantity</h6>
@@ -1921,7 +1952,7 @@
 
 		<!-- Latest product section start  -->
 		<section class="product">
-			<div class="container">
+			<div class="container position-relative">
 				<h2 class="heading">Recommands Products</h2>
 				<div class="swiper product-slider">
 					<div class="swiper-wrapper">
@@ -2003,13 +2034,15 @@
 						</div>
 					</div>
 				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
 		</section>
 		<!-- Latest product section end  -->
 
 		<!-- recent product section start  -->
 		<section class="product">
-			<div class="container">
+			<div class="container position-relative">
 				<h2 class="heading">Recent Views</h2>
 				<div class="swiper product-slider">
 					<div class="swiper-wrapper">
@@ -2105,6 +2138,8 @@
 						</div>
 					</div>
 				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
 			</div>
 		</section>
 		<!-- recent product section end  -->
@@ -2368,8 +2403,21 @@
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/js/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/lightgallery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0-beta.5/plugins/thumbnail/lg-thumbnail.min.js"></script>
 		<script src="assets/js/app.js"></script>
 		<script>
+			// Light Gallery
+			if (document.getElementById("galleryBox")) {
+				lightGallery(document.getElementById("galleryBox"), {
+					animateThumb: false,
+					zoomFromOrigin: false,
+					allowMediaOverlap: true,
+					toggleThumb: true,
+					backgroundColor: '#fff'
+				})
+			}
+
 			let detailsInfoHide = document.querySelector('.details-info-hide');
 			let readMoreBtn = document.querySelector('#read-more-btn');
 			function readMore(){
