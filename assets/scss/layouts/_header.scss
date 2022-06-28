@@ -3,7 +3,7 @@
 	left: 0;
 	width: 100%;
 	z-index: 999;
-	position: fixed;
+	// position: fixed;
 	background-color: #f9f9f9;
 
 	.dropdown {
@@ -170,7 +170,7 @@
 
 		.main-dropdown-menu{
 
-			.cardWrapper{position: absolute; top: 36px; background: #fff; left: 0px;  border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; width: 280px; padding-top: 13px;}
+			.cardWrapper{position: absolute; top: 36px; z-index: 9999; background: #fff; left: 0px;  border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; width: 280px; padding-top: 13px;}
 			.categoryTitle{font-size: 16px; padding-left: 20px;}
 			.subMenuWrapper li:first-child a{border-top: none;}
 			.menuCard>a{display: block; border-top: solid 1px #ccc; width: 100%; position: relative; padding-bottom: 5px;
@@ -194,18 +194,31 @@
 			.subMenuWrapper{ height: 180px; margin-bottom: 20px; }
 			.subMenuWrapper .subMenuTitle a:hover{color: #cc3333;}
 			ul.mainMenu>li.menuCard:hover>a>p{color: #cc3333; font-weight: bold;}
-			ul.mainMenu>li:hover .subMenu{display: block;}
+
+			@include min(992px){
+				ul.mainMenu>li:hover .subMenu{display: block;}
+			}
 
 		
 			@include max(991px) {
 				.cardWrapper {
 					position: fixed;
 					left: 0;
-					top: 76px;
-					max-height: 60vh;
+					top: 0;
+					width: 100%;
+					height: 100vh;
 					overflow: auto;
 					padding-bottom: 50px;
+
+					li.menuCard {
+						width: 100%;
+					}
 				}
+
+				.menuCard.active a i.fa-chevron-right {
+					transform: rotate(90deg);
+				}
+
 				.subMenu {
 					position: static;
 					height: auto;
@@ -215,12 +228,6 @@
 						height: auto;
 						float: none;
 					}
-				}
-			}
-
-			@include min-max(576px, 991px) {
-				.cardWrapper{
-					top: 97px;
 				}
 			}
 
@@ -259,7 +266,6 @@
 
 	&-search {
 		width: 670px;
-		overflow: hidden;
 		position: relative;
 
 		@include max(1400px) {
@@ -279,18 +285,41 @@
 			font-size: 14px;
 			line-height: 21px;
 			padding: 16px 20px;
+			padding-left: 80px;
 			border-radius: 25px;
 			border: 2px solid #333333;
 			@include max(1200px) {
 				padding: 12px 16px;
+				padding-left: 75px;
 			}
 		}
 
-		button {
+		.search-btn {
 			top: 50%;
 			right: 20px;
 			position: absolute;
 			transform: translateY(-50%);
+		}
+
+		.dropdown {
+			margin: 0;
+			position: absolute;
+			z-index: 999;
+			top: 50%;
+			left: 2px;
+			transform: translateY(-50%);
+
+			.btn-light {
+				font-size: 14px;
+				line-height: 21px;
+				padding: 14px 20px;
+				background-color: #F3F3F3 !important;
+				border-top-left-radius: 25px;
+				border-bottom-left-radius: 25px;
+				@include max(1200px) {
+					padding: 10px 16px;
+				}
+			}
 		}
 	}
 
@@ -458,57 +487,12 @@
 
 	&-dropmenu {
 		width: 100%;
-		opacity: 0;
-		top: 100%;
-		left: 50%;
-		padding-top: 16px !important;
-		user-select: none;
-		position: absolute;
-		pointer-events: none;
-		flex-direction: column;
+		padding: 16px !important;
 		background-color: #fff;
-		transform: translate(-50%, -20px);
 		transition: all 0.3s linear;
-		box-shadow: 0px 7px 32px 0px #514d4d2b;
-
-		&.active {
-			opacity: 1;
-			user-select: auto;
-			pointer-events: all;
-			transform: translate(-50%, 0px);
-		}
 
 		@include min(992px) {
 			display: none !important;
-		}
-
-		.menu {
-			width: 100%;
-			padding: 12px 0px;
-
-			&-item {
-				a {
-					width: 100%;
-					color: #333;
-					font-size: 16px;
-					font-weight: 500;
-					padding: 6px 12px;
-					line-height: 22px;
-					display: inline-block;
-					transition: all 0.3s linear;
-
-					@include max(575px) {
-						font-size: 14px;
-						padding: 4px 12px;
-					}
-
-					&:hover,
-					&.active {
-						color: #fff;
-						background-color: #ee3f24;
-					}
-				}
-			}
 		}
 
 		form {

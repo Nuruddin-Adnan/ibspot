@@ -1,10 +1,6 @@
 .breadcrumb {
-	margin-top: 200px;
+	margin-top: 30px;
 	margin-bottom: 30px;
-
-	@include max(991px) {
-		margin-top: 120px;
-	}
 
 	ul {
 		li {

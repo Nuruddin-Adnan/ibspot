@@ -1,0 +1,12 @@
+.btn-danger {
+    background-color: #ff453a !important;
+
+    &:hover {
+        background-color: darken(#ff453a, 5);
+    }
+}
+
+.btn-outline-danger {
+    color: #ff453a;
+    border-color: #ff453a;
+}

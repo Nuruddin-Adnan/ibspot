@@ -5,16 +5,47 @@ function menuShowOnHover(){
 	const mainMenuCollapse = document.querySelector(".mainMenu.collapse");
 	mainMenuCollapse.classList.add("show");
 }
+
 function menuHideOnblur(){
 	const mainMenuCollapse = document.querySelector(".mainMenu.collapse");
 	mainMenuCollapse.classList.remove("show");
 }
+
+// home mainMenu hide on mobile and tablet
+if (window.matchMedia("(max-width: 991px)").matches) {
+	if(document.querySelector(".homepage-header")){
+		let element = document.querySelector(".homepage-header .mainMenu.collapse");
+		element.classList.remove("show");
+	}
+} 
+
+// submenu close/open on click
+if(document.querySelector(".menuCard")){
+	document.querySelectorAll(".menuCard").forEach(li => {
+		li.addEventListener("click", function(){
+			this.classList.toggle("active")
+			let submenu = li.children[1];
+			submenu.classList.toggle("d-block")
+		})
+	})
+}
+
+
+// category menu show on mobile device
+function categoryMenuToggle(){
+	const element = document.querySelector(".category-menu");
+	console.log(element);
+	element.classList.toggle("d-flex");
+}
+
 
 document.querySelectorAll("#categoryMenu").forEach((item) =>
 	item.addEventListener("click", function (event) {
 		event.stopPropagation()
 	}),
 )
+
+
 
 const d = new Date()
 let year = d.getFullYear()
@@ -40,12 +71,6 @@ if (navbar) {
 	}
 }
 
-// drop menu
-const toggleBtn = document.querySelector(".menu-bar")
-
-toggleBtn.addEventListener("click", function () {
-	document.querySelector(".header-dropmenu").classList.toggle("active")
-})
 
 // inc-dec counter
 // Select increment and decrement buttons
@@ -87,6 +112,10 @@ if(document.querySelector(".home-banner-slider")){
 		loop: true,
 		effect: 'fade',
 		fadeEffect: { crossFade: true },
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
 		autoplay: {
 			delay: 3000,
 			disableOnInteraction: false,

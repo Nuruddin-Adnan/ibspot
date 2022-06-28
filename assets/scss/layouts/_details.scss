@@ -94,6 +94,11 @@
 			align-items: center;
 			margin-bottom: 28px;
 
+			@include max(991px){
+				margin-bottom: 0px;
+				padding-bottom: 5px;
+			}
+
 			span {
 				margin-right: 5px;
 				display: inline-block;

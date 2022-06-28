@@ -29,8 +29,28 @@
 						</a>
 						<form action="#">
 							<div class="header-search">
+								<div class="dropdown">
+									<button class="btn btn-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+										All <img src="assets/images/icons/arrow-down-sm.png" alt="" class="ps-1">
+									</button>
+									<ul class="dropdown-menu w-auto py-3 mt-0" aria-labelledby="dropdownMenuButton1">
+									  <li><a class="dropdown-item" href="#"> Beauty & Personal Care </a></li>
+									  <li><a class="dropdown-item" href="#"> Sports & Outdoors </a></li>
+									  <li><a class="dropdown-item" href="#"> Health & Household </a></li>
+									  <li><a class="dropdown-item" href="#"> Grocery & Gourmet Food </a></li>
+									  <li><a class="dropdown-item" href="#"> Home & Kitchen </a></li>
+									  <li><a class="dropdown-item" href="#"> Office Products </a></li>
+									  <li><a class="dropdown-item" href="#"> Automotive </a></li>
+									  <li><a class="dropdown-item" href="#"> Clothing, Shoes & Jewelry </a></li>
+									  <li><a class="dropdown-item" href="#"> Patio, Lawn & Garden </a></li>
+									  <li><a class="dropdown-item" href="#"> Arts, Crafts & Sewing </a></li>
+									  <li><a class="dropdown-item" href="#"> Baby Products </a></li>
+									  <li><a class="dropdown-item" href="#"> Toys & Games </a></li>
+									  <li><a class="dropdown-item" href="#"> Tools & Home Improvement </a></li>
+									</ul>
+								</div>
 								<input type="text" placeholder="Search..." />
-								<button type="submit">
+								<button type="submit" class="search-btn">
 									<img src="assets/images/icons/search.svg" alt="" />
 								</button>
 							</div>
@@ -68,44 +88,38 @@
 								</span>
 								<h6>$1,222</h6>
 							</a>
-	
-							<span class="menu-bar"></span>
 						</div>
 					</div>
 				</div>
 				<div class="header-dropmenu container">
 					<form action="#">
 						<div class="header-search">
+							<div class="dropdown">
+								<button class="btn btn-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									All <img src="assets/images/icons/arrow-down-sm.png" alt="" class="ps-1">
+								</button>
+								<ul class="dropdown-menu w-auto py-3 mt-0" aria-labelledby="dropdownMenuButton1">
+								  <li><a class="dropdown-item" href="#"> Beauty & Personal Care </a></li>
+								  <li><a class="dropdown-item" href="#"> Sports & Outdoors </a></li>
+								  <li><a class="dropdown-item" href="#"> Health & Household </a></li>
+								  <li><a class="dropdown-item" href="#"> Grocery & Gourmet Food </a></li>
+								  <li><a class="dropdown-item" href="#"> Home & Kitchen </a></li>
+								  <li><a class="dropdown-item" href="#"> Office Products </a></li>
+								  <li><a class="dropdown-item" href="#"> Automotive </a></li>
+								  <li><a class="dropdown-item" href="#"> Clothing, Shoes & Jewelry </a></li>
+								  <li><a class="dropdown-item" href="#"> Patio, Lawn & Garden </a></li>
+								  <li><a class="dropdown-item" href="#"> Arts, Crafts & Sewing </a></li>
+								  <li><a class="dropdown-item" href="#"> Baby Products </a></li>
+								  <li><a class="dropdown-item" href="#"> Toys & Games </a></li>
+								  <li><a class="dropdown-item" href="#"> Tools & Home Improvement </a></li>
+								</ul>
+							</div>
 							<input type="text" placeholder="Search..." />
-							<button type="submit">
+							<button type="submit" class="search-btn">
 								<img src="assets/images/icons/search.svg" alt="" />
 							</button>
 						</div>
 					</form>
-
-					<ul class="menu">
-						<li class="menu-item">
-							<a href="#">Super Deals</a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Featured Brands </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Featured Brands </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Trending Styles </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Gift Cards </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Sell on ibspot.com </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Track your order </a>
-						</li>
-					</ul>
 				</div>
 			</div>
 			<div class="header-bottom">
@@ -161,6 +175,12 @@
 					</div>
 					<div class="main-dropdown-menu" onmouseover="menuShowOnHover();" onmouseout="menuHideOnblur();">
 						<ul class="cardWrapper mainMenu shadow-sm collapse" style="background-color: #f9f9f9;">
+							<li class="menuCard text-center d-lg-none d-block header-logo">
+								<div>
+									<img src="assets/images/logo2.svg" alt="logo" class="img-fluid mx-auto py-4">
+									<button class="btn-close float-end" data-bs-toggle="collapse" data-bs-target=".mainMenu"></button>
+								</div>
+							</li>
 							<li class="menuCard">
 							<a href="#">
 								<i class="fa-solid fa-bag-shopping"></i>
@@ -1006,19 +1026,6 @@
 				<div class="row">
 					<div class="col-xl-4">
 						<div class="details-gallery">
-							<div class="details-info d-lg-none d-block">
-								<h6>Apple</h6>
-								<h2>
-									2020 Apple Mac Mini with Apple M1 Chip (8GB RAM, 256GB SSD
-									Storage)
-								</h2>
-								<div class="review">
-									<span>
-										<img src="assets/images/icons/stars-full.svg" alt="" />
-									</span>
-									<p>4.5 <span>( 150 reviews ) </span></p>
-								</div>
-							</div>
 							<div class="swiper mySwiper2">
 								<div class="swiper-wrapper" id="galleryBox">
 									<a href="assets/images/gallery/1.png" data-lg-size="1600-2400" class="swiper-slide gallery-img lg">
@@ -1096,10 +1103,22 @@
 								</div>
 							</div>
 						</div>
+						<div class="details-info d-lg-none d-block">
+							<h6>Apple</h6>
+							<h2>
+								2020 Apple Mac Mini with Apple M1 Chip (8GB RAM, 256GB SSD
+								Storage)
+							</h2>
+							<div class="review">
+								<span>
+									<img src="assets/images/icons/stars-full.svg" alt="" />
+								</span>
+								<p>4.5 <span>( 150 reviews ) </span></p>
+							</div>
+						</div>
 					</div>
 					<div class="col-lg-8 col-xl-5 order-lg-2 order-3">
 						<div class="details-info">
-
 							<div class="details-info-hide overflow-hidden" style="max-height: 500px;">
 								<div class="d-lg-block d-none">
 									<h6>Apple</h6>
@@ -1368,7 +1387,7 @@
 								</li>
 							</ul>
 
-							<!-- <div class="details-card-notification">
+							<div class="details-card-notification mb-4">
 								<h2>out of Stock</h2>
 								<p>Get Notified when this item comes back in stock</p>
 
@@ -1378,7 +1397,7 @@
 										<button>Notify Me</button>
 									</div>
 								</form>
-							</div> -->
+							</div>
 
 							<div class="details-card-quantity">
 								<h2>In Stock</h2>

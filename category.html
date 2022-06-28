@@ -37,44 +37,38 @@
 								</span>
 								<h6>$1,222</h6>
 							</a>
-	
-							<span class="menu-bar"></span>
 						</div>
 					</div>
 				</div>
 				<div class="header-dropmenu container">
 					<form action="#">
 						<div class="header-search">
+							<div class="dropdown">
+								<button class="btn btn-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									All <img src="assets/images/icons/arrow-down-sm.png" alt="" class="ps-1">
+								</button>
+								<ul class="dropdown-menu w-auto py-3 mt-0" aria-labelledby="dropdownMenuButton1">
+								  <li><a class="dropdown-item" href="#"> Beauty & Personal Care </a></li>
+								  <li><a class="dropdown-item" href="#"> Sports & Outdoors </a></li>
+								  <li><a class="dropdown-item" href="#"> Health & Household </a></li>
+								  <li><a class="dropdown-item" href="#"> Grocery & Gourmet Food </a></li>
+								  <li><a class="dropdown-item" href="#"> Home & Kitchen </a></li>
+								  <li><a class="dropdown-item" href="#"> Office Products </a></li>
+								  <li><a class="dropdown-item" href="#"> Automotive </a></li>
+								  <li><a class="dropdown-item" href="#"> Clothing, Shoes & Jewelry </a></li>
+								  <li><a class="dropdown-item" href="#"> Patio, Lawn & Garden </a></li>
+								  <li><a class="dropdown-item" href="#"> Arts, Crafts & Sewing </a></li>
+								  <li><a class="dropdown-item" href="#"> Baby Products </a></li>
+								  <li><a class="dropdown-item" href="#"> Toys & Games </a></li>
+								  <li><a class="dropdown-item" href="#"> Tools & Home Improvement </a></li>
+								</ul>
+							</div>
 							<input type="text" placeholder="Search..." />
-							<button type="submit">
+							<button type="submit" class="search-btn">
 								<img src="assets/images/icons/search.svg" alt="" />
 							</button>
 						</div>
 					</form>
-
-					<ul class="menu">
-						<li class="menu-item">
-							<a href="#">Super Deals</a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Featured Brands </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Featured Brands </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Trending Styles </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Gift Cards </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Sell on ibspot.com </a>
-						</li>
-						<li class="menu-item">
-							<a href="#"> Track your order </a>
-						</li>
-					</ul>
 				</div>
 			</div>
 			<div class="header-bottom">
@@ -134,268 +128,277 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-2">
+						<button class="btn btn-lg py-3 mb-3 fw-normal border d-lg-none d-flex justify-content-between align-items-center w-100 " onclick="categoryMenuToggle();">FILTER BY <i class="fa-solid fa-chevron-right"></i></button>
+
 						<div class="category-menu">
-							<div class="accordion" id="accordionExample">
-								<div class="accordion-item">
-									<h2 class="accordion-header" id="headingOne">
-										<button
-											class="accordion-button"
-											type="button"
-											data-bs-toggle="collapse"
-											data-bs-target="#collapseOne"
-											aria-expanded="true"
-											aria-controls="collapseOne"
+							<div>
+								<p class="fs-2 d-lg-none d-flex justify-content-between align-items-center mb-3">FILTER BY <button class="btn-close" onclick="categoryMenuToggle();"></button></p>
+								<div class="accordion" id="accordionExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingOne">
+											<button
+												class="accordion-button"
+												type="button"
+												data-bs-toggle="collapse"
+												data-bs-target="#collapseOne"
+												aria-expanded="true"
+												aria-controls="collapseOne"
+											>
+												Shop by Categories
+											</button>
+										</h2>
+										<div
+											id="collapseOne"
+											class="accordion-collapse collapse show"
+											aria-labelledby="headingOne"
+											data-bs-parent="#accordionExample"
 										>
-											Shop by Categories
-										</button>
-									</h2>
-									<div
-										id="collapseOne"
-										class="accordion-collapse collapse show"
-										aria-labelledby="headingOne"
-										data-bs-parent="#accordionExample"
-									>
-										<div class="accordion-body">
-											<ul>
-												<li>
-													<a href="#">Foot</a>
-												</li>
-												<li>
-													<a href="#">Foot, Hand & Nail Care</a>
-												</li>
-												<li>
-													<a href="#">Fragrance</a>
-												</li>
-												<li>
-													<a href="#">Hair Care</a>
-												</li>
-												<li>
-													<a href="#">Makeup</a>
-												</li>
-												<li>
-													<a href="#">Oral Care</a>
-												</li>
-												<li>
-													<a href="#">Personal Care</a>
-												</li>
-												<li>
-													<a href="#">Shave & Hair Removal</a>
-												</li>
-												<li>
-													<a href="#">Tools & Accessories</a>
-												</li>
-											</ul>
+											<div class="accordion-body">
+												<ul>
+													<li>
+														<a href="#">Foot</a>
+													</li>
+													<li>
+														<a href="#">Foot, Hand & Nail Care</a>
+													</li>
+													<li>
+														<a href="#">Fragrance</a>
+													</li>
+													<li>
+														<a href="#">Hair Care</a>
+													</li>
+													<li>
+														<a href="#">Makeup</a>
+													</li>
+													<li>
+														<a href="#">Oral Care</a>
+													</li>
+													<li>
+														<a href="#">Personal Care</a>
+													</li>
+													<li>
+														<a href="#">Shave & Hair Removal</a>
+													</li>
+													<li>
+														<a href="#">Tools & Accessories</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingTwo">
+											<button
+												class="accordion-button collapsed"
+												type="button"
+												data-bs-toggle="collapse"
+												data-bs-target="#collapseTwo"
+												aria-expanded="true"
+												aria-controls="collapseTwo"
+											>
+												Price
+											</button>
+										</h2>
+										<div
+											id="collapseTwo"
+											class="accordion-collapse collapse"
+											aria-labelledby="headingTwo"
+											data-bs-parent="#accordionExample"
+										>
+											<div class="accordion-body">
+												<ul>
+													<li>
+														<a href="#">Foot</a>
+													</li>
+													<li>
+														<a href="#">Foot, Hand & Nail Care</a>
+													</li>
+													<li>
+														<a href="#">Fragrance</a>
+													</li>
+													<li>
+														<a href="#">Hair Care</a>
+													</li>
+													<li>
+														<a href="#">Makeup</a>
+													</li>
+													<li>
+														<a href="#">Oral Care</a>
+													</li>
+													<li>
+														<a href="#">Personal Care</a>
+													</li>
+													<li>
+														<a href="#">Shave & Hair Removal</a>
+													</li>
+													<li>
+														<a href="#">Tools & Accessories</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingThree">
+											<button
+												class="accordion-button collapsed"
+												type="button"
+												data-bs-toggle="collapse"
+												data-bs-target="#collapseThree"
+												aria-expanded="true"
+												aria-controls="collapseThree"
+											>
+												Format
+											</button>
+										</h2>
+										<div
+											id="collapseThree"
+											class="accordion-collapse collapse"
+											aria-labelledby="headingThree"
+											data-bs-parent="#accordionExample"
+										>
+											<div class="accordion-body">
+												<ul>
+													<li>
+														<a href="#">Foot</a>
+													</li>
+													<li>
+														<a href="#">Foot, Hand & Nail Care</a>
+													</li>
+													<li>
+														<a href="#">Fragrance</a>
+													</li>
+													<li>
+														<a href="#">Hair Care</a>
+													</li>
+													<li>
+														<a href="#">Makeup</a>
+													</li>
+													<li>
+														<a href="#">Oral Care</a>
+													</li>
+													<li>
+														<a href="#">Personal Care</a>
+													</li>
+													<li>
+														<a href="#">Shave & Hair Removal</a>
+													</li>
+													<li>
+														<a href="#">Tools & Accessories</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingFour">
+											<button
+												class="accordion-button collapsed"
+												type="button"
+												data-bs-toggle="collapse"
+												data-bs-target="#collapseFour"
+												aria-expanded="true"
+												aria-controls="collapseFour"
+											>
+												Language
+											</button>
+										</h2>
+										<div
+											id="collapseFour"
+											class="accordion-collapse collapse"
+											aria-labelledby="headingFour"
+											data-bs-parent="#accordionExample"
+										>
+											<div class="accordion-body">
+												<ul>
+													<li>
+														<a href="#">Foot</a>
+													</li>
+													<li>
+														<a href="#">Foot, Hand & Nail Care</a>
+													</li>
+													<li>
+														<a href="#">Fragrance</a>
+													</li>
+													<li>
+														<a href="#">Hair Care</a>
+													</li>
+													<li>
+														<a href="#">Makeup</a>
+													</li>
+													<li>
+														<a href="#">Oral Care</a>
+													</li>
+													<li>
+														<a href="#">Personal Care</a>
+													</li>
+													<li>
+														<a href="#">Shave & Hair Removal</a>
+													</li>
+													<li>
+														<a href="#">Tools & Accessories</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="accordion-item">
+										<h2 class="accordion-header" id="headingFive">
+											<button
+												class="accordion-button collapsed"
+												type="button"
+												data-bs-toggle="collapse"
+												data-bs-target="#collapseFive"
+												aria-expanded="true"
+												aria-controls="collapseFive"
+											>
+												Condition
+											</button>
+										</h2>
+										<div
+											id="collapseFive"
+											class="accordion-collapse collapse"
+											aria-labelledby="headingFive"
+											data-bs-parent="#accordionExample"
+										>
+											<div class="accordion-body">
+												<ul>
+													<li>
+														<a href="#">Foot</a>
+													</li>
+													<li>
+														<a href="#">Foot, Hand & Nail Care</a>
+													</li>
+													<li>
+														<a href="#">Fragrance</a>
+													</li>
+													<li>
+														<a href="#">Hair Care</a>
+													</li>
+													<li>
+														<a href="#">Makeup</a>
+													</li>
+													<li>
+														<a href="#">Oral Care</a>
+													</li>
+													<li>
+														<a href="#">Personal Care</a>
+													</li>
+													<li>
+														<a href="#">Shave & Hair Removal</a>
+													</li>
+													<li>
+														<a href="#">Tools & Accessories</a>
+													</li>
+												</ul>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header" id="headingTwo">
-										<button
-											class="accordion-button collapsed"
-											type="button"
-											data-bs-toggle="collapse"
-											data-bs-target="#collapseTwo"
-											aria-expanded="true"
-											aria-controls="collapseTwo"
-										>
-											Price
-										</button>
-									</h2>
-									<div
-										id="collapseTwo"
-										class="accordion-collapse collapse"
-										aria-labelledby="headingTwo"
-										data-bs-parent="#accordionExample"
-									>
-										<div class="accordion-body">
-											<ul>
-												<li>
-													<a href="#">Foot</a>
-												</li>
-												<li>
-													<a href="#">Foot, Hand & Nail Care</a>
-												</li>
-												<li>
-													<a href="#">Fragrance</a>
-												</li>
-												<li>
-													<a href="#">Hair Care</a>
-												</li>
-												<li>
-													<a href="#">Makeup</a>
-												</li>
-												<li>
-													<a href="#">Oral Care</a>
-												</li>
-												<li>
-													<a href="#">Personal Care</a>
-												</li>
-												<li>
-													<a href="#">Shave & Hair Removal</a>
-												</li>
-												<li>
-													<a href="#">Tools & Accessories</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header" id="headingThree">
-										<button
-											class="accordion-button collapsed"
-											type="button"
-											data-bs-toggle="collapse"
-											data-bs-target="#collapseThree"
-											aria-expanded="true"
-											aria-controls="collapseThree"
-										>
-											Format
-										</button>
-									</h2>
-									<div
-										id="collapseThree"
-										class="accordion-collapse collapse"
-										aria-labelledby="headingThree"
-										data-bs-parent="#accordionExample"
-									>
-										<div class="accordion-body">
-											<ul>
-												<li>
-													<a href="#">Foot</a>
-												</li>
-												<li>
-													<a href="#">Foot, Hand & Nail Care</a>
-												</li>
-												<li>
-													<a href="#">Fragrance</a>
-												</li>
-												<li>
-													<a href="#">Hair Care</a>
-												</li>
-												<li>
-													<a href="#">Makeup</a>
-												</li>
-												<li>
-													<a href="#">Oral Care</a>
-												</li>
-												<li>
-													<a href="#">Personal Care</a>
-												</li>
-												<li>
-													<a href="#">Shave & Hair Removal</a>
-												</li>
-												<li>
-													<a href="#">Tools & Accessories</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header" id="headingFour">
-										<button
-											class="accordion-button collapsed"
-											type="button"
-											data-bs-toggle="collapse"
-											data-bs-target="#collapseFour"
-											aria-expanded="true"
-											aria-controls="collapseFour"
-										>
-											Language
-										</button>
-									</h2>
-									<div
-										id="collapseFour"
-										class="accordion-collapse collapse"
-										aria-labelledby="headingFour"
-										data-bs-parent="#accordionExample"
-									>
-										<div class="accordion-body">
-											<ul>
-												<li>
-													<a href="#">Foot</a>
-												</li>
-												<li>
-													<a href="#">Foot, Hand & Nail Care</a>
-												</li>
-												<li>
-													<a href="#">Fragrance</a>
-												</li>
-												<li>
-													<a href="#">Hair Care</a>
-												</li>
-												<li>
-													<a href="#">Makeup</a>
-												</li>
-												<li>
-													<a href="#">Oral Care</a>
-												</li>
-												<li>
-													<a href="#">Personal Care</a>
-												</li>
-												<li>
-													<a href="#">Shave & Hair Removal</a>
-												</li>
-												<li>
-													<a href="#">Tools & Accessories</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="accordion-item">
-									<h2 class="accordion-header" id="headingFive">
-										<button
-											class="accordion-button collapsed"
-											type="button"
-											data-bs-toggle="collapse"
-											data-bs-target="#collapseFive"
-											aria-expanded="true"
-											aria-controls="collapseFive"
-										>
-											Condition
-										</button>
-									</h2>
-									<div
-										id="collapseFive"
-										class="accordion-collapse collapse"
-										aria-labelledby="headingFive"
-										data-bs-parent="#accordionExample"
-									>
-										<div class="accordion-body">
-											<ul>
-												<li>
-													<a href="#">Foot</a>
-												</li>
-												<li>
-													<a href="#">Foot, Hand & Nail Care</a>
-												</li>
-												<li>
-													<a href="#">Fragrance</a>
-												</li>
-												<li>
-													<a href="#">Hair Care</a>
-												</li>
-												<li>
-													<a href="#">Makeup</a>
-												</li>
-												<li>
-													<a href="#">Oral Care</a>
-												</li>
-												<li>
-													<a href="#">Personal Care</a>
-												</li>
-												<li>
-													<a href="#">Shave & Hair Removal</a>
-												</li>
-												<li>
-													<a href="#">Tools & Accessories</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+							</div>
+							<div class="action d-lg-none mt-4">
+								<a href="#" class="btn btn-lg w-100 btn-outline-danger mb-2">CLEAR ALL</a>
+								<a href="#" class="btn btn-lg w-100 btn-danger">APPLY FILTER</a>
 							</div>
 						</div>
 					</div>
