@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="assets/css/main.css.map" />
 	</head>
 
-	<body>
+	<body class="mb-5">
 		<!-- header section start  -->
 		<header class="header">
 			<div class="header-top">
@@ -2371,6 +2371,44 @@
 		</section>
 		<!-- footer section end  -->
 
+		<!-- cart-sticky-bottom section start -->
+		<section class="cart-sticky-bottom">
+			<div class="container">
+				<div class="d-lg-flex justify-content-between">
+					<div class="left d-flex align-items-center">
+						<div class="flex-shrink-0 me-2">
+							<img src="assets/images/gallery/2.png" alt="product-image" class="img-fluid product-img">
+						</div>
+						<div>
+							<p class="product-name">2020 Apple Mac Mini with Apple M1 Chip </p>
+							<p class="product-price">$1,215.00 <del>$ 2,899</del></p>
+						</div>
+					</div>
+					<div class="right d-md-flex">
+						<div class="d-flex">
+							<div class="me-2">
+								<select class="form-select">
+									<option>Black</option>
+									<option>Red</option>
+									<option>Blue</option>
+									<option>White</option>
+								</select>
+							</div>
+							<div class="quantity-counter">
+								<button id="minus2">-</button>
+								<div id="total-count2">0</div>
+								<button id="plus2">+</button>
+							</div>
+						</div>
+						<div class="ms-md-2 mt-md-0 mt-2">
+							<a href="#" class="btn add-to-cart-button w-100">ADD CART</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- cart-sticky-bottom section end -->
+
 		<!-- Modal -->
 		<div
 			class="modal fade modal-cart"
@@ -2442,6 +2480,38 @@
 			function readMore(){
 				detailsInfoHide.style = "max-height: auto";
 				readMoreBtn.style = "display: none;"
+			}
+
+			// inc-dec counter
+			// Select increment and decrement buttons
+			const incrementCount2 = document.getElementById("plus2")
+			const decrementCount2 = document.getElementById("minus2")
+
+			if (document.querySelector(".cart-sticky-bottom .quantity-counter")) {
+				// Select total count
+				const totalCount = document.getElementById("total-count2")
+
+				// Variable to track count
+				var count = 0
+
+				// Display initial count value
+				totalCount.innerHTML = count
+
+				// Function to increment count
+				const handleIncrement = () => {
+					count++
+					totalCount.innerHTML = count
+				}
+
+				// Function to decrement count
+				const handleDecrement = () => {
+					count--
+					totalCount.innerHTML = count
+				}
+
+				// Add click event to buttons
+				incrementCount2.addEventListener("click", handleIncrement)
+				decrementCount2.addEventListener("click", handleDecrement)
 			}
 		</script>
 	</body>

@@ -715,7 +715,7 @@ body {
 .header-menu-item {
   margin-right: 28px;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .header-menu-item {
     margin-right: 12px;
   }
@@ -1809,6 +1809,71 @@ body {
 }
 .product-brand .swiper-slide {
   text-align: center;
+}
+
+.cart-sticky-bottom {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  padding: 20px 0;
+  box-shadow: -2px -3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s linear;
+  transform: translateY(100%);
+}
+.cart-sticky-bottom .product-img {
+  max-width: 92px;
+}
+.cart-sticky-bottom .product-price,
+.cart-sticky-bottom .product-name {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+.cart-sticky-bottom .product-price del,
+.cart-sticky-bottom .product-name del {
+  color: #7C7C7C;
+}
+.cart-sticky-bottom select {
+  background-color: #EDEDED;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  border-radius: 10px;
+  padding-block: 9px;
+}
+.cart-sticky-bottom select:focus {
+  outline: 0;
+}
+.cart-sticky-bottom .quantity-counter {
+  display: flex;
+  height: 45px;
+  width: 104px;
+  overflow: hidden;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+.cart-sticky-bottom .quantity-counter button {
+  font-size: 24px;
+  color: #26251c;
+  line-height: 21.5px;
+  margin: 0px 12px;
+}
+.cart-sticky-bottom .add-to-cart-button {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #EE3F24;
+  border-radius: 10px;
+  padding: 9px 30px;
 }
 
 .offers {
