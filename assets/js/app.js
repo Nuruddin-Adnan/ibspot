@@ -72,6 +72,7 @@ if (navbar) {
 }
 
 
+
 // inc-dec counter
 // Select increment and decrement buttons
 const incrementCount = document.getElementById("plus")
@@ -122,7 +123,6 @@ if(document.querySelector(".home-banner-slider")){
 		},
 	})
 }
-
 
 if (document.querySelector(".product-slider")) {
 	var swiper = new Swiper(".product-slider", {
@@ -244,3 +244,41 @@ var swiper2 = new Swiper(".mySwiper2", {
 		swiper: swiper,
 	},
 })
+
+
+// cart sticky bottom
+let cartStickyBottom = document.querySelector(".cart-sticky-bottom");
+// Back to top
+let topButton = document.getElementById("back-to-top");
+let footer = document.querySelector(".footer");
+
+if (cartStickyBottom) {
+	// Get the cartStickyBottom
+	window.onscroll = function () {
+		cartStickyBottomFunction();
+		checkVisible(footer);
+	}
+
+	// Add the sticky style to the cartStickyBottom when you reach its scroll position. Remove "sticky style" when you leave the scroll position
+	// Back to Top button show hide
+	function cartStickyBottomFunction() {
+		if (window.pageYOffset >= 300 && checkVisible(footer) == false) {
+			cartStickyBottom.style.transform = "translateY(0)";
+			topButton.classList.add("d-block");
+			topButton.classList.remove("d-none");
+		} else {
+			cartStickyBottom.style.transform = "translateY(100%)";
+			topButton.classList.add("d-none");
+			topButton.classList.remove("d-block");
+		}
+	}
+
+	// check element is visible or not. This function returen true or false
+	function checkVisible(elm) {
+		var rect = elm.getBoundingClientRect();
+		var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+		return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+	}
+
+	
+}
